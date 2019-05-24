@@ -96,3 +96,45 @@ for(prop in persona){
     console.log(persona[prop]);
 
 }
+
+
+//V8 = JS engine
+//WEB APIs: mozilla//apis buscar
+//objeto global : window  = BOM = browser object model = 
+//var a = 1
+//window.a = 1
+
+window.innerHeight
+window.innerWidth
+//innerHeight
+//innerWidth
+
+//outerHeight --> Number - el alto en px del navegador
+//outerWidth --> Number - el ancho en px del navegador
+//console.log()-->objecto - nos da funciones de logueo en consola de desarrollo
+//console.table()
+//location --> object - tiene propiedades que controlan la ubicacion de un usuario
+//location.href = String -mapea a la barra de direcciones
+//history.forward () -> Avanza un nivel en el historial
+//history.back() ->retrocede un nivel en el hsitorial
+//document = api web del DOM =  document object model  = es un objeto aunque no parezca
+//console.dir(X)->muestra x en formato JSON
+//JSON = Javascript Object Notation
+
+console.clear();
+console.clear();
+
+//SELECCIONAR NODOS(ETIQUETAS)
+//document.getElementById(X)-->DOmElement
+//document.getElementsByClassName(X)-->Array
+//document.getElementsByName(X)-->
+//document.getElementsByTagName(X)
+//document.querySelector(X)
+//document.querySelectorAll(X)
+
+let dos = document.getElementById("item2");
+console.dir(dos);//el dir hace verlo como objeto
+
+
+
+
