@@ -131,10 +131,80 @@ console.clear();
 //document.getElementsByTagName(X)
 //document.querySelector(X)
 //document.querySelectorAll(X)
-
-let dos = document.getElementById("item2");
+//viejas formas de sellecionar nodos
+/* let dos = document.getElementById("item2");
 console.dir(dos);//el dir hace verlo como objeto
+let items = document.getElementsByClassName("item");
+let lis = document.getElementsByTagName("li"); */
+
+
+//nuevas formas de seleccioanr  nodos
+
+let dos = document.querySelector("#item2");
+console.dir(dos);
+/* console.dir(items);
+console.dir(lis); */
+
+
+//querySelector: busca la primerra instancia del selector X
+//querySelectorAll: busca todas las instancias del selector X
+
+//trae la clase de todo el array si pongo all
+
+let lis = document.querySelectorAll("li");
+let items = document.querySelectorAll(".item");
+console.dir(items);
+console.dir(lis);
+
+//COMO CREAR UN NUEVO NODO(ETIQUETA)
+//1°
+let p = document.createElement("p");
+p.innerText = "Mi Nuevo Texto";
+p.id = "Nuevo";
+p.className = "item";
+//para agregarlo al DOM del html (agregar njodo al dom)
+//Nodo.appendChild(NodoNuevo);-->Inserta el nodo nuevo como el ultimo hijo del Nodo
+//Nodo.insertBefore(NodoNuevo,NodoREferencia)-->Inserta el nodo nuevo en una ubicacion especifica, antes del NodoReferencia
+let body  = document.querySelector("body");
+body.appendChild(p);
+
+/*
+    1)Crear un elemento <li> y ponerle un texto
+    2) meterlo como primer item del <ul>
+
+    EXTRA
+    1)Crear un elemento <ul> nuevo y vacio
+    2)hscer un bcle de 5 iteraciones
+    3)Por iteracion de ciclo se tiene que crear un <li> nuevo
+    4)agregar todos los <li> al <ul> del punto 1
+    5)agregar el <ul> del punto 1 al DOM
 
 
 
+*/ 
 
+
+let liNuevo = document.createElement("li");
+let liReferencia = document.getElementById("item1");
+liNuevo.innerText = "Hala laakaaa!";
+liNuevo.id = "NuevoLi";
+liNuevo.className = "item";
+
+let ul = document.querySelector("ul");
+ul.insertBefore(liNuevo, liReferencia);
+
+
+
+console.log(p);
+
+let nuevoUl = document.createElement("ul");
+
+for(let i = 0; i < 5; i++)
+{
+    let nuevoLi = document.createElement("li");
+    nuevoLi.innerText = "Nuevo Texto" + i;
+    nuevoUl.appendChild(nuevoLi);
+
+}
+
+body.appendChild(nuevoUl);
