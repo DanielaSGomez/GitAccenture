@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center; /*alineados en Y*/
+    justify-content: space-between;/*alineados en X*/
+    padding: 16px 200px;
+    background-color: #ff5959;
+}
+
+a , h1 {
+    color: white;
+
+}
+
+a{
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+#banner {
+    height: 400px;
+    background-image: url("perrito.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;  
+    display: flex;
+    align-items: center;
+    padding: 0 200px; 
+
+/*
+X: left - center -right
+Y: top - center - bottom
+*/
+
+}
+
+#banner > div{
+    width: 300px;
+    background-color: rgba(180, 154, 89, 0.5);
+    padding: 16px;
+}
+
+#banner > div h2{
+
+    color: #ff5959;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+/*
+    IMAGENES PRIMARIAS:
+
+    <img>
+
+    IMAGENES SECUNDARIAS:
+
+    imagenes de decoracion: tramas fondos, iconos, etc
+
+    background-image: url("");
+
+*/
+
+#services{
+
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 300px;
+    
+
+}
+#services > h2{
+    text-align: center;
+    padding: 25px 300px;
+}
+
+#servicios{
+  
+    display: flex;
+
+    justify-content: space-between;
+  
+}
+
+#servicio1{
+    height: 150px;
+    width: 1000px;
+}
+
+
+#servicio1 > h3{
+   
+    text-align: center;
+    
+}
+
+#servicio2 > h3{
+    
+    text-align: center;
+}
+
+#servicio3 > h3{
+
+    text-align: center;
+}
