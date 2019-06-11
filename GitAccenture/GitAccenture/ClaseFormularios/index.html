@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+
+     <!-- form: es el eingreso de informacion del usuario al servidor
+        Controles de formularios:
+
+        inout + select + textarea+ button+ fieldset +
+         label + legend + option
+        
+        input type : text
+    -->
+    <form>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" placeholder="Ingrese su nombre" id="nombre">
+        </div>
+        <div>
+            <label for="edad">Edad:</label>
+            <input type="number" placeholder="Ingrese su edad" id="edad">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Ingrese su email" id="email">
+        </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password">
+        </div>
+        
+        <div>
+            <label for="nac">Nacionalidad</label>
+            <select id="nac">
+                <option value="0">Seleccione una opcion</option>
+                <option value="ar">Argentina</option>
+                <option value="ve">Venezuela</option>
+                <option value="ch">China</option>
+            </select>
+        </div>
+        <div>
+            <label for="comentarios">Comentarios</label>
+            <textarea  id="comentarios"></textarea>
+        </div>
+        <div>
+            <label for="masc" >Masculino</label>
+            <input type="radio" id="masc" name="gen">
+            <label for="fem">Femenino</label>
+            <input type="radio" id="fem" name="gen">
+            
+        </div>
+        <div>
+            <label for="tou">Acepto Termino y Condiciones</label>
+            <input type="checkbox" id="tou">
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+
+    
+
+    <script src="formularios.js"></script>
+</body>
+</html>
