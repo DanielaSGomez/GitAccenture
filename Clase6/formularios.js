@@ -22,9 +22,10 @@ function main(){
     9)Agregar el <select> al DOM
     
     */
-
+    
     let seleccion = document.querySelector("select");
-
+    let divNac = seleccion.parentNode;
+    let label = document.querySelector("#nac-label");
     seleccion.addEventListener("change",tomarSelect);
 
     let paises = {
@@ -39,24 +40,41 @@ function main(){
        // console.log(seleccion.value);
         let valor = seleccion.value;
         console.log(valor);
-
         let provincias = paises[valor];
-        if(valor == "0")
+        console.log(provincias);
+        //TRUE o {FALSE|0|""|NULL|UNDEFINED}
+       
+        if(provincias)
         {
-            console.log("Tiene que seleccionar una opcion");
+            let selectNuevo = document.createElement("select");
             
+            for(let i= 0; i<provincias.length;i++ )
+            {
+                let opcion = document.createElement("option");
+                opcion.innerText = provincias[i];
+                selectNuevo.appendChild(opcion);
+
+            }
+
+            divNac.appendChild(selectNuevo);
+
+
         }
         else
         {
-            for(let i = 0; i<paises.length; i++)
-            {
-                console.log(provincias[i]);
-            }
-        }
-    }
+            let p = document.createElement("p");
+            p.innerText = "Tiene que seleconar una opcion"
+            p.style.color = "red";
+            p.className = "error";
+            divNac.insertBefore(p,label);
 
-        //Asignarle el nuevo submit
-    form.addEventListener("submit",handleSubmit);
+        }
+
+   }
+ }
+
+    //     //Asignarle el nuevo submit
+    // form.addEventListener("submit",handleSubmit);
 
 
 
@@ -87,4 +105,4 @@ function main(){
     
         */
 
-}
+
